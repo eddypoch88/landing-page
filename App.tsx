@@ -91,7 +91,9 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        <SocialProof /> {/* <-- Social Proof Section Added */}
+        <SocialProof />
+        {/* GRADIENT BRIDGE ADDED HERE */}
+        <div className="w-full h-32 bg-gradient-to-b from-black to-white pointer-events-none" aria-hidden="true" />
         <Logos />
         <ProblemSection />
         <SolutionSection />
