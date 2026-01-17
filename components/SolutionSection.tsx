@@ -14,37 +14,37 @@ const WhatsAppIcon = () => (
 
 const SolutionSection: React.FC = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left: Text Content */}
           <div className="order-2 lg:order-1 space-y-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 leading-tight">
               Instant Auto-Reply. <br/>
-              <span className="text-brand-green">Zero delay.</span>
+              <span className="text-green-500">Zero delay.</span>
             </h2>
             
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-slate-600 leading-relaxed">
                Our system catches every lead instantly. From TikTok to WhatsApp in milliseconds. Send price lists, images, and checkout links automatically.
             </p>
 
             <div className="flex items-center gap-12 pt-4">
                <div>
-                  <h4 className="text-3xl font-bold text-gray-900">24/7</h4>
-                  <p className="text-sm text-gray-500 mt-1">Operation</p>
+                  <h4 className="text-3xl font-bold text-slate-800">24/7</h4>
+                  <p className="text-sm text-slate-500 mt-1">Operation</p>
                </div>
-               <div className="w-px h-12 bg-gray-200"></div>
+               <div className="w-px h-12 bg-slate-200"></div>
                <div>
-                  <h4 className="text-3xl font-bold text-gray-900">&lt; 1s</h4>
-                  <p className="text-sm text-gray-500 mt-1">Response Time</p>
+                  <h4 className="text-3xl font-bold text-slate-800">&lt; 1s</h4>
+                  <p className="text-sm text-slate-500 mt-1">Response Time</p>
                </div>
             </div>
           </div>
 
           {/* Right: Flow Visual */}
           <div className="order-1 lg:order-2">
-             <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 relative overflow-hidden border border-gray-100">
+             <div className="bg-white rounded-xl shadow-sm p-8 lg:p-12 relative overflow-hidden border border-slate-100">
                 <div className="flex items-center justify-between relative z-10">
                    
                    {/* Source */}
@@ -52,13 +52,13 @@ const SolutionSection: React.FC = () => {
                       <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center shadow-lg transform transition hover:scale-105">
                          <TikTokIcon />
                       </div>
-                      <span className="font-bold text-gray-900 text-sm">Lead Clicks</span>
+                      <span className="font-bold text-slate-800 text-sm">Lead Clicks</span>
                    </div>
 
                    {/* Connection Line */}
                    <div className="flex-1 px-4 relative h-2">
-                      <div className="absolute top-0 left-0 w-full h-full bg-gray-200 rounded-full"></div>
-                      <div className="absolute top-0 left-0 h-full bg-brand-green rounded-full w-full animate-[loading_1.5s_ease-in-out_infinite]"></div>
+                      <div className="absolute top-0 left-0 w-full h-full bg-slate-200 rounded-full"></div>
+                      <div className="absolute top-0 left-0 h-full bg-green-500 rounded-full w-full animate-[loading_1.5s_ease-in-out_infinite]"></div>
                    </div>
 
                    {/* Destination */}
@@ -66,12 +66,12 @@ const SolutionSection: React.FC = () => {
                       <div className="w-20 h-20 bg-[#25D366] rounded-2xl flex items-center justify-center shadow-lg transform transition hover:scale-105">
                          <WhatsAppIcon />
                       </div>
-                      <span className="font-bold text-gray-900 text-sm">WhatsApp Sent</span>
+                      <span className="font-bold text-slate-800 text-sm">WhatsApp Sent</span>
                    </div>
                 </div>
 
                 {/* Decorative BG elements */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-20 bg-brand-green/5 blur-3xl"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-20 bg-green-500/10 blur-3xl"></div>
              </div>
           </div>
 
