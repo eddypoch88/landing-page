@@ -1,5 +1,20 @@
 import React from 'react';
-import { PlayCircle, MessageCircle, ShoppingBag, Heart, Share2, Music2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import { MessageCircle, ShoppingBag, Heart, Share2, Music2 } from 'lucide-react';
+
+// SVG Icon for WhatsApp, as it's more recognizable
+const WhatsAppIcon: React.FC = () => (
+    <svg
+      viewBox="0 0 24 24"
+      className="w-6 h-6"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16.75,13.96C17,14.26 17.06,14.81 16.71,15.36C16.37,15.91 15.3,16.5 14.82,16.56C14.34,16.62 13.5,16.83 12.22,16.22C10.73,15.5 9.5,14.15 9.35,13.96C9.2,13.78 8.44,12.75 8.44,11.81C8.44,10.87 9,10.32 9.15,10.14C9.3,9.96 9.56,9.81 9.81,9.81C10.06,9.81 10.26,9.81 10.43,9.81C10.6,9.81 10.73,9.66 10.91,10C11.08,10.35 11.41,11.21 11.47,11.33C11.53,11.46 11.59,11.64 11.5,11.81C11.41,12 11.35,12.06 11.17,12.24C11,12.42 10.85,12.51 10.73,12.63C10.61,12.75 10.47,12.91 10.64,13.18C10.82,13.46 11.27,14.11 11.88,14.64C12.65,15.33 13.2,15.53 13.45,15.62C13.7,15.72 13.91,15.66 14.05,15.53C14.2,15.39 14.53,14.97 14.71,14.71C14.88,14.46 15.14,14.43 15.39,14.53C15.64,14.62 16.5,15.06 16.75,13.96M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22C13.66,22 15.25,21.54 16.6,20.73L21,22L20.27,17.76C21.21,16.42 21.78,14.78 21.94,13.06C21.95,12.73 22,12.37 22,12A10,10 0 0,0 12,2Z"
+      />
+    </svg>
+);
 
 const Hero: React.FC = () => {
   return (
@@ -23,14 +38,26 @@ const Hero: React.FC = () => {
               Automate your TikTok leads directly to WhatsApp. Close sales while you sleep. No more manual replies, no more "pm tepi".
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-              <button className="w-full sm:w-auto bg-brand-green hover:bg-green-500 text-white font-bold py-4 px-8 rounded-full transition-all shadow-xl shadow-green-200 transform hover:-translate-y-1 text-lg">
-                Start Free Trial
-              </button>
-              <button className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 font-bold py-3.5 px-8 rounded-full transition-all flex items-center justify-center gap-2 group">
-                <PlayCircle className="text-brand-green group-hover:scale-110 transition-transform" size={24} />
-                <span>See how it works</span>
-              </button>
+            <div className="flex justify-center lg:justify-start mb-10">
+               <motion.a
+                href="https://wa.me/60123456789?text=Hi!%20Saya%20berminat%20dengan%20servis%20AutoLeads."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-8 rounded-full shadow-xl shadow-green-200 text-lg transition-colors"
+                animate={{
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <WhatsAppIcon />
+                Cuba AutoLeads Sekarang
+              </motion.a>
             </div>
             
             <div className="flex items-center justify-center lg:justify-start gap-4">
@@ -50,23 +77,16 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Visuals */}
+          {/* Right Visuals (Unchanged) */}
           <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none h-[600px] flex items-center justify-center lg:justify-end perspective-1000">
-            
-            {/* Phone Mockup */}
             <div className="relative w-[300px] h-[600px] bg-gray-900 rounded-[40px] border-[8px] border-gray-900 shadow-2xl z-20 overflow-hidden transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
-              {/* Dynamic Island / Notch */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-30"></div>
-              
-              {/* Screen Content - TikTok Style */}
               <div className="relative w-full h-full bg-gray-800">
                  <img 
                   src="https://images.unsplash.com/photo-1542596768-5d1d21f1cfb6?q=80&w=800&auto=format&fit=crop" 
                   className="w-full h-full object-cover opacity-80" 
                   alt="TikTok Video Background"
                 />
-                
-                {/* TikTok UI Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent pt-20 text-white">
                   <div className="flex items-end justify-between mb-4">
                     <div className="space-y-2">
@@ -82,8 +102,6 @@ const Hero: React.FC = () => {
                          <span>Original Sound - Tudung Viral</span>
                       </div>
                     </div>
-                    
-                    {/* Side Actions */}
                     <div className="flex flex-col gap-4 items-center">
                        <div className="flex flex-col items-center gap-1">
                           <div className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center backdrop-blur-sm">
@@ -105,8 +123,6 @@ const Hero: React.FC = () => {
                        </div>
                     </div>
                   </div>
-                  
-                  {/* Shop Now Button */}
                   <button className="w-full bg-[#FE2C55] text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 animate-pulse">
                     <ShoppingBag size={18} />
                     Shop Now
@@ -114,8 +130,6 @@ const Hero: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Chat Float Card - Positioned absolutely relative to the phone container */}
             <div className="absolute top-[20%] left-[-20px] md:left-[-80px] w-64 md:w-72 bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-4 z-30 animate-in fade-in slide-in-from-bottom-10 duration-1000 border border-gray-100">
                <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-green">
@@ -130,7 +144,6 @@ const Hero: React.FC = () => {
                   </div>
                   <span className="ml-auto text-xs text-gray-400">Now</span>
                </div>
-
                <div className="space-y-3">
                   <div className="bg-gray-100 rounded-2xl rounded-tl-none p-3 text-sm text-gray-700">
                      Hi! Saya berminat dengan promo Merdeka ni. Ada stock lagi?
@@ -143,7 +156,6 @@ const Hero: React.FC = () => {
                   </div>
                </div>
             </div>
-
           </div>
         </div>
       </div>
